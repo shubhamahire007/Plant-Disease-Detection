@@ -1,0 +1,216 @@
+{
+    "ahireshubham047@gmail.com": {
+        "password": "scrypt:32768:8:1$4vxt5nrR4U7y22RN$20317d7f719e6036d81a295b5c30f7a6586bb13720f05b5cdf998834e3e4a18d19a9257f7c1976ec227774bea3b8d8dc961aee658ad24575ad9cabfca9de3454",
+        "history": [
+            {
+                "image": "uploadimages/temp_9e4419311dc64e0db673e30c23874157_Apple_scab.JPG",
+                "prediction": "Apple Apple scab",
+                "timestamp": "2025-05-21 00:39:50"
+            },
+            {
+                "image": "uploadimages/temp_e4e2319bb2a447928ddc92dffcf6761e_corn_healthy.jpg",
+                "prediction": "Corn healthy",
+                "timestamp": "2025-05-21 00:40:47"
+            },
+            {
+                "image": "uploadimages/temp_b15744817c2b41bebe87a67e8fb91930_corn_cercospora_leaf.JPG",
+                "prediction": "Corn Cercospora leaf spot Gray leaf spot",
+                "timestamp": "2025-05-21 00:58:02"
+            },
+            {
+                "image": "uploadimages/temp_f64eedd01e004ea482ad370d811062d0_grape_healthy.JPG",
+                "prediction": "Grape healthy",
+                "timestamp": "2025-05-21 13:20:02"
+            },
+            {
+                "image": "uploadimages/temp_f7f10ad8ac5b40b7b4ef255618d82279_download.jpeg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-21 15:11:44"
+            },
+            {
+                "image": "uploadimages/temp_4a8bdba3464f474fb7dc6f5d9498b55a_1.jpeg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-22 11:18:12"
+            },
+            {
+                "image": "uploadimages/temp_7048a58688454fe8a0f1048333041c62_download (1).jpeg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-22 11:18:54"
+            },
+            {
+                "image": "uploadimages/temp_13dd1f492dcf44529da45ca6ca9b3a6e_1.jpeg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-22 11:19:05"
+            },
+            {
+                "image": "uploadimages/temp_201876587d36446695dfa5d850e9daa5_Apple_ceder_apple_rust.JPG",
+                "prediction": "Apple Black rot",
+                "timestamp": "2025-05-25 09:57:44"
+            }
+        ]
+    },
+    "abc@gmail.com": {
+        "password": "scrypt:32768:8:1$GR9M2vx9NEbYUzU7$3174513d61bbb3f28c5c50032db477441321130dd0aa0b6c4b3b4129fb36b7375d5b3021c6efdae988dd8de5244d49ab33b99da7dd30de8e9f020b06f2208963",
+        "history": [
+            {
+                "image": "uploadimages/temp_8dc56c8321724375b4a1f78ea9e013c3_onion.jpeg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-21 13:25:31"
+            },
+            {
+                "image": "uploadimages/temp_7943109feec94d96b2f3097ebb7ef2b7_tomato-bacterial-spot2.jpg",
+                "prediction": "Tomato Early blight",
+                "timestamp": "2025-05-21 13:26:12"
+            }
+        ]
+    },
+    "admin@plantshield.com": {
+        "password": "scrypt:32768:8:1$tPE8CNzqm9kZeDmO$ff762758484fd7e6034bd902316f7f7e9e736364801dc4887ecd77fee7e42d8e35caf2425c350a41dcaa3e2fd0d7444b3c6236859532822357c56129e8eec101",
+        "history": []
+    },
+    "manoj@gmail.com": {
+        "password": "scrypt:32768:8:1$hkPH8B3QUSRleYew$207cbacf1eefd5ff5c5dd331892d336148b83babc07ec50217297416fdbd4a1760e2e4e90a0147d0254804bad8a22b91b2a64fe738ae356b7566a195a9da2fdd",
+        "history": [
+            {
+                "image": "uploadimages/temp_2b50d6979a174180a108ec7aea190689_tomato_mosaic_virus.JPG",
+                "prediction": "Tomato Tomato mosaic virus",
+                "timestamp": "2025-05-23 20:04:33"
+            },
+            {
+                "image": "uploadimages/temp_b2963f7eba0b48c289d05acdada23286_Apple_scab.JPG",
+                "prediction": "Apple Apple scab",
+                "timestamp": "2025-05-23 20:04:44"
+            },
+            {
+                "image": "uploadimages/temp_cf62ecb14631481caa32ab9385741b8d_background_without_leaves.jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:04:54"
+            },
+            {
+                "image": "uploadimages/temp_656ab7d4552946ce9e159222cebd46da_grape_leaf_blight.JPG",
+                "prediction": "Grape Leaf blight (Isariopsis Leaf Spot)",
+                "timestamp": "2025-05-23 20:05:02"
+            },
+            {
+                "image": "uploadimages/temp_81f7f990f0d74563a5ea1d4697a91477_tomato_early_blight.JPG",
+                "prediction": "Tomato Early blight",
+                "timestamp": "2025-05-23 20:05:21"
+            },
+            {
+                "image": "uploadimages/temp_29c85efe19a0473480a8b669b2850e3f_tomato-leaf-curl-virus3.jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:05:40"
+            },
+            {
+                "image": "uploadimages/temp_f9f0125bee4f4a53bcf332c02699efb0_apple_black_rot.JPG",
+                "prediction": "Apple Black rot",
+                "timestamp": "2025-05-23 20:06:17"
+            },
+            {
+                "image": "uploadimages/temp_bef3689b58dd4c92bde5b8af83cd4378_Measles-on-grapes.jpg",
+                "prediction": "Tomato Early blight",
+                "timestamp": "2025-05-23 20:11:51"
+            },
+            {
+                "image": "uploadimages/temp_82777e13b0a74a0c8818d603fe995916_images (1).jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:12:29"
+            },
+            {
+                "image": "uploadimages/temp_fd11b7f120da44e1bee9983a4f03db18_images.jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:12:34"
+            },
+            {
+                "image": "uploadimages/temp_9fd7559530d942cf884dae9160baf46e_pott.jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:14:34"
+            },
+            {
+                "image": "uploadimages/temp_2e498b55700f4e1bb09c941c384ed832_PotatoEarlyBlight2.JPG",
+                "prediction": "Potato Early blight",
+                "timestamp": "2025-05-23 20:16:28"
+            },
+            {
+                "image": "uploadimages/temp_1a3b2a8a5cd044899f674599a4fa7e12_PotatoEarlyBlight2.JPG",
+                "prediction": "Potato Early blight",
+                "timestamp": "2025-05-23 20:16:28"
+            },
+            {
+                "image": "uploadimages/temp_8b9f328b038f4b4bb0453355ce181790_po.jpg",
+                "prediction": "No disease or plant detected",
+                "timestamp": "2025-05-23 20:17:00"
+            },
+            {
+                "image": "uploadimages/temp_c9471eb19aaa4fb188ea549076d81503_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 15:06:37"
+            },
+            {
+                "image": "uploadimages/temp_48615cd26e3041eabab4ec2d41ca4469_corn_cercospora_leaf.JPG",
+                "prediction": "Corn Cercospora leaf spot Gray leaf spot",
+                "timestamp": "2025-05-24 15:11:14"
+            },
+            {
+                "image": "uploadimages/temp_c189f4a1b140446bba4ce44fce2580ca_corn_dise.jpg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 15:14:25"
+            },
+            {
+                "image": "uploadimages/temp_0929648e85144cd4a28a137b1f20850d_corn_dise.jpg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 15:37:12"
+            },
+            {
+                "image": "uploadimages/temp_3ebe5df8878e436088aec6651cf56e28_corn_dise.jpg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 15:41:01"
+            },
+            {
+                "image": "uploadimages/temp_20abd757cb474f82b86f66037ca0f570_corn_dise.jpg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 15:44:24"
+            },
+            {
+                "image": "uploadimages/temp_0024e8ec5af44d9498d44d6c1d95569a_corn_dise.jpg",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 15:55:58"
+            },
+            {
+                "image": "uploadimages/temp_dfbc382398284f26b965b22f2655e549_corn_common_rust.JPG",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 16:04:52"
+            },
+            {
+                "image": "uploadimages/temp_4905e68cf33140a9a2d69bed93346968_corn_common_rust.JPG",
+                "prediction": "Corn Common rust",
+                "timestamp": "2025-05-24 16:10:45"
+            },
+            {
+                "image": "uploadimages/temp_1665d2b14e62444ba639999218efdba7_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 16:13:00"
+            },
+            {
+                "image": "uploadimages/temp_31b3aa3029bf41a8bac29355849fd8cd_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 16:14:10"
+            },
+            {
+                "image": "uploadimages/temp_bd532e8a956142b2bb21dcc48bab9921_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 16:19:12"
+            },
+            {
+                "image": "uploadimages/temp_30d31240ee4d48ce911e72eb5dfe325f_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 16:21:55"
+            },
+            {
+                "image": "uploadimages/temp_10cdbda11d4349a7a72b5b6ca6b67798_cherry_powdery_mildew.JPG",
+                "prediction": "Cherry Powdery mildew",
+                "timestamp": "2025-05-24 16:22:34"
+            }
+        ]
+    }
+}

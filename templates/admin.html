@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    .history-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" href="/">Plant Shield - Admin</a>
+  <a class="btn btn-outline-light btn-sm" href="/logout">Logout</a>
+</nav>
+
+<div class="container mt-5">
+  <h2 class="mb-4">👤 All Registered Users</h2>
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>No.</th>
+        <th>Email</th>
+        <th>Prediction Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for email, data in users.items() %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ email }}</td>
+        <td>{{ data.history | length }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <hr class="my-5">
+
+  <h2 class="mb-3">📜 User Prediction Histories</h2>
+  {% for email, data in users.items() %}
+    <div class="mb-4">
+      <h5>{{ email }}</h5>
+      {% if data.history %}
+      <ul class="list-group">
+        {% for item in data.history %}
+        <li class="list-group-item">
+          <div class="d-flex align-items-center">
+            <img src="/{{ item.image }}" class="history-img me-3" alt="Image">
+            <div>
+              <p class="mb-0"><strong>Prediction:</strong> {{ item.prediction }}</p>
+              <small><strong>Date:</strong> {{ item.timestamp }}</small>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p class="text-muted">No history available.</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <hr class="my-5">
+
+  <h2 class="mb-3">📬 Feedback Received</h2>
+  {% if feedback %}
+  <ul class="list-group">
+    {% for f in feedback %}
+    <li class="list-group-item">
+      <strong>{{ f.name }} ({{ f.email }})</strong><br>
+      {{ f.message }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No feedback available.</p>
+  {% endif %}
+  <br>
+  <br>
+</div>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

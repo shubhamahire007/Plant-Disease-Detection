@@ -1,0 +1,84 @@
+{% set current_path = request.path %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+            <img src="../static/images/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Plant Shield
+    </a>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/' %}active text-white fw-bold{% endif %}" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/feedback' %}active text-white fw-bold{% endif %}" href="/feedback">Feedback</a>
+      </li>
+      {% if session.user %}
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/history' %}active text-white fw-bold{% endif %}" href="/history">History</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <ul class="navbar-nav ms-auto">
+      {% if session.user %}
+      <li class="nav-item d-flex align-items-center text-white me-2">
+        {{ session.user }}
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/logout">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm me-2" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/register">Register</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+</nav>
+
+    <div class="container mt-5">
+      <h2 class="mb-4">Your Prediction History</h2>
+      {% if history %}
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for item in history %}
+        <div class="col d-flex justify-content-center">
+          <div class="card shadow hist" style="width: 250px">
+            <img
+              src="{{ item.image }}"
+              class="card-img-top history-img"
+              alt="Uploaded Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Prediction: {{ item.prediction }}</h5>
+              <p class="card-text">
+                <strong>Date:</strong> {{ item.timestamp }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+      {% else %}
+      <p>No predictions found yet.</p>
+      {% endif %}
+    </div>
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

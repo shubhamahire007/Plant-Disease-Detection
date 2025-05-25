@@ -1,0 +1,79 @@
+{% set current_path = request.path %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+            <img src="../static/images/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Plant Shield
+    </a>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/' %}active text-white fw-bold{% endif %}" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/feedback' %}active text-white fw-bold{% endif %}" href="/feedback">Feedback</a>
+      </li>
+      {% if session.user %}
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/history' %}active text-white fw-bold{% endif %}" href="/history">History</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <ul class="navbar-nav ms-auto">
+      {% if session.user %}
+      <li class="nav-item d-flex align-items-center text-white me-2">
+        {{ session.user }}
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/logout">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm me-2" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/register">Register</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+</nav>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Send Us Your Feedback</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Your Email</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit Feedback</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <link rel="icon" href="../static/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+            <img src="../static/images/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Plant Shield
+    </a>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/' %}active text-white fw-bold{% endif %}" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/feedback' %}active text-white fw-bold{% endif %}" href="/feedback">Feedback</a>
+      </li>
+      {% if session.user %}
+      <li class="nav-item">
+        <a class="nav-link {% if current_path == '/history' %}active text-white fw-bold{% endif %}" href="/history">History</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <ul class="navbar-nav ms-auto">
+      {% if session.user %}
+      <li class="nav-item d-flex align-items-center text-white me-2">
+        {{ session.user }}
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/logout">Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm me-2" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/register">Register</a>
+      </li>
+      {% endif %}
+      {% if session.user == 'admin@plantshield.com' %}
+      <li class="nav-item">
+        <a class="btn btn-outline-light btn-sm" href="/admin">Admin Dashboard</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="mb-4 title">Upload a Plant Image</h1>
+        <form action="/upload/" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" class="form-control" name="img" accept="image/png, image/jpeg" required>
+            </div>
+            <button type="submit" class="btn btn-success">Upload</button>
+        </form>
+    </div>
+
+    {% if result %}
+<div class="result-box mt-4">
+    <div class="result-img-container text-center">
+        <img src="{{ imagepath }}" alt="Uploaded Image" class="result-image">
+    </div>
+    <div class="result-text text-center">
+        <h2>{{ prediction['name'] }}</h2>
+        {% if prediction['name'] != 'No disease or plant detected' %}
+        <p><strong>Cause:</strong> {{ prediction['cause'] }}</p>
+        <p><strong>Cure:</strong> {{ prediction['cure'] }}</p>
+        {% endif %}
+        <div class="d-flex justify-content-center mt-4">
+          <a href="/download_report/{{ imagepath.split('/')[-1] }}" 
+            class="btn btn-success px-4 py-2 fs-6 shadow-sm">
+       📄 Download Report (PDF)
+    </a>
+</div>
+    </div>
+    
+
+</div>
+{% endif %}
+
+
+    {% if home_page %}
+    <hr class="my-5">
+    <h1 class="text-center mb-4">Supported Plants</h1>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+      {% set displayed_plants = [] %}
+      {% for entry in prediction_data %}
+        {% set plant_name = entry.name.split(' ')[0] %}
+        {% if plant_name not in displayed_plants and plant_name != 'No' %}
+            {% set _ = displayed_plants.append(plant_name) %}
+            <div class="col text-center">
+                <a href="/diseases/{{ plant_name|lower }}" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                    <img src="../static/images/{{ plant_name|lower }}.jpg" class="card-img-top" alt="{{ plant_name }} image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ plant_name }}</h5>
+                    </div>
+                    </div>
+                </a>
+            </div>
+            
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+</div>
+<br>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
